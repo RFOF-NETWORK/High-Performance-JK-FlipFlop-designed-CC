@@ -1,0 +1,26 @@
+# Tiny Tapeout / SkyWater 130nm Produktions-Konfiguration
+project:
+  wo_title:        "Elite Monolith Computer Chip v2"
+  description:     "Autarker Krypto-Core mit integriertem JK-Flipflop und ALU"
+  how_it_works:    "Verilog-Strukturen definieren Gatter-Ebene fuer SHA-Beschleunigung und Bit-Shift"
+  language:        "Verilog"
+
+# Zuweisung der physischen Metall-Pins am fertigen Chip-Gehäuse
+inputs:
+  - clk            # System-Takt
+  - rst_n          # Reset (Aktiv-Low)
+  - j              # Input J
+  - k              # Input K
+  - op_code[0]     # ALU Steuerbit 0
+  - op_code[1]     # ALU Steuerbit 1
+  - data_in[0]     # Krypto-Datenbit 0
+  - data_in[1]     # Krypto-Datenbit 1
+outputs:
+  - jk_q           # Ausgang des Flipflops
+  - alu_out[0]     # ALU Ergebnis Bit 0
+  - alu_out[1]     # ALU Ergebnis Bit 1
+  - alu_out[2]     # ALU Ergebnis Bit 2
+  - alu_out[3]     # ALU Ergebnis Bit 3
+  - alu_out[4]     # ALU Ergebnis Bit 4
+  - alu_out[5]     # ALU Ergebnis Bit 5
+  - ready          # Krypto-Status-Pin
